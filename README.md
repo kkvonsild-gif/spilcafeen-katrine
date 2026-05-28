@@ -98,16 +98,6 @@ Du kan for eksempel forklare:
 
 
 ## Eksempel på JavaScript kode
-Vælg et vigtigt stykke JavaScript-kode fra dit projekt.
-
-Det kan for eksempel være kode, der:
-
-* viser data i DOM’en
-* filtrerer data
-* søger i data
-* reagerer på brugerinput
-* bruger en funktion
-* bruger forEach metoden
 
 ```
 function applyFiltersAndSort() {
@@ -141,16 +131,15 @@ function applyFiltersAndSort() {
   showGames(filteredGames);
 }
 ```
+### Hvad gør koden?
+Dette stykke kode gør det muligt for brugeren at sortere og filtrere i spiloversigten. Brugeren kan søge efter specifikke titler, sortere og filtrere efter genre. Det gøres med en funktion indeholdende en `filter()`funktionen samt et if- og if else-statement. Funktionen påvirker HTML-siden ved at kalde på showGames funktionen, som udfører DOM-manipulation og viser spil på siden.
 
-## Hvad gør koden?
-Forklar med dine egne ord, hvad koden gør.
+1. Funktionen applyFiltersAndSort gemmer først brugerens input (value) fra genre-dropdown (genreSelect), søgebaren (searchInput) og sorteringen (sortSelect) i variabler. 
+2. Et nyt array oprettes (filteredGames) og `filter()` gennemgår hvert spil (game) i spildata-arrayet (allGames).
+    * `Array.isArray` tjekker om genren for et spil er et array, og hvis den er, bruges den direkte, og hvis den ikke er, laves den om til et array for kun at bruge én datatype.
+    * Koden tjekker om brugeren har valgt at se alle genrer (value: 'all'), og hvis det ikke er true, returneres den valgte genre (includes()).
+    * Koden tjekker brugerens input i søgebaren for matches med spiltitler, og tilpasser inputtet til at være små bogstaver.
+    * Resultaterne af disse tjek returneres i det nye array hvis de matcher både genre og søgeinput.
+3. Funktion tjekker om brugeren har valgt at sortere på titelnavn, hvis ja, sorteres spiltitler i arrayet (filteredGames) fra a til b. Hvis brugeren i stedet har valgt at sortere for årstal, sorteres arrayet efter årstal.
+4. Til sidst viser funktionen det nye array som søgeresultater for brugeren på siden.
 
-Skriv for eksempel:
-
-* Hvad sker der først?
-* Hvilke data bruges?
-* Hvilken funktion bliver kaldt?
-* Hvordan påvirker koden HTML-siden?
-* Hvorfor er koden vigtig for projektet?
-
-> 
