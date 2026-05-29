@@ -54,10 +54,6 @@ header h1 {
   margin-bottom: 0.4rem;
 }
 
-header p {
-  font-size: var(--font-size-xsmall);
-}
-
 .logo{
   position: absolute;
   left: 4%;
