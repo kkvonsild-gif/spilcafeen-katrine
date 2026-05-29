@@ -148,10 +148,6 @@ function showGameDialog(game) {
   const players = game.players ? `${game.players.min}-${game.players.max} spillere` : "Ukendt";
 
   content.innerHTML = `
-    <h2>${game.title}</h2>
-    
-    <button type="button" class="like-button" id="like-btn" title="Like dette spil">❤</button>
-
     <img src="${game.image}" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom:10px; border-radius: 8px;" />
 
     <div class="game-details">
@@ -162,17 +158,10 @@ function showGameDialog(game) {
         <p><strong>Sprog:</strong> ${game.language}</p>
         <p><strong>Sværhedsgrad:</strong> ${game.difficulty}</p>
         <p><strong>Rating:</strong> ${game.rating}</p>
-        <p><strong>Lokation:</strong> ${game.location}</p>
         <p><strong>Hylde:</strong> ${game.shelf}</p>
         <p><strong>Beskrivelse:</strong> ${game.description}</p>
     </div>
   `;
-
-  // ===== LIKE-KNAP FUNKTION =====
-  const likeBtn = content.querySelector("#like-btn");
-  likeBtn.addEventListener("click", () => {
-    likeBtn.classList.toggle("liked");
-  });
 
   dialog.showModal();
 }
