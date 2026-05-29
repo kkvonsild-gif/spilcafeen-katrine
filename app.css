@@ -160,6 +160,7 @@ header h1 {
   padding: 10px;
   color: var(--white);
   background: var(--primary-color);
+  height: 100%; /* fylder den røde baggrund helt til bunden af spilkortet */
 }
 
 .game-info h2 {
