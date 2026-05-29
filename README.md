@@ -78,7 +78,7 @@ function applyFiltersAndSort() {
 }
 ```
 ### Hvad gør koden?
-Dette stykke kode gør det muligt for brugeren at sortere og filtrere i spiloversigten. Brugeren kan søge efter specifikke titler, sortere og filtrere efter genre. Det gøres med en funktion indeholdende en `filter()`funktionen samt et if- og if else-statement. Funktionen påvirker HTML-siden ved at kalde på showGames funktionen, som udfører DOM-manipulation og viser spil på siden.
+Dette stykke kode gør det muligt for brugeren at søge efter specifikke titler, sortere og filtrere efter genre. Det gøres med en funktion indeholdende en `filter()`funktionen samt et if- og if else-statement. Funktionen påvirker HTML-siden ved at kalde på showGames funktionen, som udfører DOM-manipulation og viser spil på siden.
 
 1. Funktionen applyFiltersAndSort gemmer først brugerens input (value) fra genre-dropdown (genreSelect), søgebaren (searchInput) og sorteringen (sortSelect) i variabler. 
 2. Et nyt array oprettes (filteredGames) og `filter()` gennemgår hvert spil (game) i spildata-arrayet (allGames).
