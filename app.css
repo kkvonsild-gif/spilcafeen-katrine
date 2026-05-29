@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* universel selector der nulstiller mit website for at sikre ens design på tværs af browsere */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* CSS Variabler */
+/* CSS variabler */
 :root {
   --primary-color: #BF171C;
   --background-color: #EEDECD;
@@ -58,25 +59,27 @@ header h1 {
   top: 20px;
 }
 
-/* NAVBAR */
-/* Selve section for navbar*/
+/* NAVBAR/CONTROLS */
+/* Selve section for navbar */
 .controls {
   display: flex;
   justify-content: center;
   background: transparent;
   padding: 12px;
 }
-/* Hver div med sortering */
+/* Hver gruppe af controls */
 .control-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8px 12px;
 }
+
 .control-group label {
   font-size: var(--font-size-medium);
   text-transform: uppercase;
 }
+/* søgebaren */
 .control-group input {
   background-color: rgba(169, 0, 0, 0.9);
   border-radius: 10px;
@@ -93,6 +96,7 @@ header h1 {
   font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-regular);
 }
+/* sorteringsknapperne */
 .control-group select {
   background-color: rgba(169, 0, 0, 0.9);
   border-radius: 10px;
@@ -108,7 +112,7 @@ header h1 {
   border: none;
 }
 
-/* STATUS-BAR */
+/* STATUS-BAR for antal resultater*/
 .status-bar {
   display: flex;
   justify-content: center;
@@ -119,16 +123,16 @@ header h1 {
 }
 
 
-
 /* MAIN */
 /* Grid layout */
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* fylder rækkerne ud med grids på min 150px */
   gap: 20px;
   padding: 20px;
 }
-/* Hvert spilkort */
+
+/* Spilkort */
 .game-card {
   background: var(--white);
   border-radius: 10px;
@@ -139,6 +143,7 @@ header h1 {
   transition: transform 0.2s;
 }
 
+/* hover-effekt på spilkort */
 .game-card:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -151,7 +156,7 @@ header h1 {
   object-fit: cover;
 }
 
-/* Tekst */
+/* tekst på spilkort */
 .game-info {
   padding: 10px;
   color: var(--white);
@@ -180,50 +185,45 @@ header h1 {
   color: var(--white);
 }
 
-/* Opdateret styling for at gøre boksen større og mere læsbar */
+/* styling af detaljesiden/dialogboks */
 #game-dialog {
-  border: none;
   padding: 0;
+  border: none;
   border-radius: 12px;
-
-  /* STØRRELSE*/  
   width: 95%;
-  max-width: 600px; /* giver en max bredde så den ikke er unødigt stor */
-  max-height: 70vh; /* giver en max højde */
-
-  /* PLACERING MIDT PÅ SKÆRMEN*/ 
+  max-width: 600px;
+  max-height: 70vh; 
+  /* placerer boksen midt på skærmen */ 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  /*LAYOUT*/ 
+  /* holder indholdet inden for kanterne og giver boksen en skygge */ 
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-  /*INDHOLD*/ 
+/* Indhold i dialogboks*/ 
 #dialog-content {
-  padding: 2rem 2rem; /* Mere luft i siderne gør det lettere at læse */
+  padding: 2rem 2rem;
   height: 100%;
   max-height: 70vh;
   overflow-y:auto;
-
   color: #333;
-  line-height: 1.6; /* Gør teksten mere behagelig at læse */
+  line-height: 1.6; /* Giver luft mellem linjer */
 }
 
 /* Gør billedet lidt mindre indeni, så teksten kan rykke op */
 #dialog-content img {
   display: block;
   max-width: 100%;
-  max-height: 240px; /* Begrænser billedets højde så det ikke stjæler al pladsen */
+  max-height: 240px;
   object-fit: contain; /* Sørger for billedet ikke bliver strukket */
   margin: 0;
   border-radius: 6px;
 }
 
-/* Styling af overskriften i dialogen */
+/* Styling af overskriften i dialogboksen */
 #dialog-content h2 {
   font-size: var(--font-size-large);
   margin: 0 0 0.35rem 0;
@@ -231,31 +231,19 @@ header h1 {
   text-align: center;
   line-height: 1;
 }
-/* Afstand mellem tekst-elementer */
+/* Afstand mellem paragraphs/tekst */
 #dialog-content p {
   margin: 0 0 0.1rem 0;
 }
 
-/* En lille detalje: Gør scrollbaren pænere (virker i Chrome/Edge/Safari) */
-#dialog-content::-webkit-scrollbar {
-  width: 8px;
-}
-#dialog-content::-webkit-scrollbar-track {
-  background: var(--white);
-}
-#dialog-content::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 10px;
-}
-
-/* Styling af lukkeknappen (X) */
+/* Styling af exit/lukkeknappen */
 #close-dialog {
   position: absolute;
   top: 15px;
   right: 15px;
   background: var(--primary-color);
   color: var(--white);
-  border: 2px solid var(--white); /* Giver den lidt kontrast */
+  border: none;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -273,20 +261,14 @@ header h1 {
   background: #8e2a1b;
 }
 
-/* Sørg for at dialogen er relativ, så X-knappen kan placeres absolut */
+/* Gør dialogboksen relativ, så exitknappen kan placeres med position:absolute */
 #game-dialog form {
   position: relative;
 }
 
-
-
-/* RESPONSIVT DESIGN */
-@media only screen and (max-width: 600px) {...}
-
-/* Responsivt flex-box til navbar */
+/* Responsivt flex-box til navbar for tilpasning til små skærme under 601px */
 @media (max-width: 600px) {
   .controls {
-    flex-direction: column;
+    flex-direction: column; /* navbar/controls står i kolonne */
   }
-
   }
