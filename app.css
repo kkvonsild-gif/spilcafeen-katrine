@@ -192,6 +192,7 @@ header p {
   border-radius: 12px;
 
   /* STØRRELSE*/  
+  width: 95%;
   max-width: 600px; /* giver en max bredde så den ikke er unødigt stor */
   max-height: 70vh; /* giver en max højde */
 
