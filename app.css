@@ -193,7 +193,7 @@ header p {
 
   /* STØRRELSE*/ 
   width: 95%; /* Gør boksen bredere - 800px er ofte det "søde punkt" for tekst og billeder */
-  max-width: 850px; /* Lad den fylde 90% af skærmens højde i stedet for 80% */
+  max-width: 350px; /* Lad den fylde 90% af skærmens højde i stedet for 80% */
   max-height: 70vh; 
 
   /* PLACERING MIDT PÅ SKÆRMEN*/ 
@@ -206,9 +206,10 @@ header p {
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
+
   /*INDHOLD*/ 
 #dialog-content {
-  padding: 2.5rem 2.5rem; /* Mere luft i siderne gør det lettere at læse */
+  padding: 2rem 2rem; /* Mere luft i siderne gør det lettere at læse */
   height: 100%;
   max-height: 70vh;
   overflow-y:auto;
@@ -223,7 +224,7 @@ header p {
   max-width: 100%;
   max-height: 240px; /* Begrænser billedets højde så det ikke stjæler al pladsen */
   object-fit: contain; /* Sørger for billedet ikke bliver strukket */
-  margin: 0 auto 6px auto;
+  margin: 0;
   border-radius: 6px;
 }
 
@@ -237,7 +238,7 @@ header p {
 }
 /* Afstand mellem tekst-elementer */
 #dialog-content p {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.1rem 0;
 }
 
 /* En lille detalje: Gør scrollbaren pænere (virker i Chrome/Edge/Safari) */
