@@ -277,26 +277,6 @@ header p {
   background: #8e2a1b;
 }
 
-/* Like-hjerte styling */
-.like-button {
-  background: none;
-  border: none;
-  font-size: var(--font-size-large);
-  cursor: pointer;
-  color: var(--grey); /* Grå når 'ikke-valgt' */
-  transition: color 0.3s, transform 0.2s;
-  display: block;
-  margin: 10px auto;
-}
-
-.like-button.liked {
-  color: var(--primary-color); /* Rød når der er liket */
-}
-
-.like-button:active {
-  transform: scale(1.3);
-}
-
 /* Sørg for at dialogen er relativ, så X-knappen kan placeres absolut */
 #game-dialog form {
   position: relative;
