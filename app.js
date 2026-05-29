@@ -154,7 +154,6 @@ function showGameDialog(game) {
         <p><strong>Genre:</strong> ${genres}</p>
         <p><strong>Spillere:</strong> ${players}</p>
         <p><strong>Spilletid:</strong> ${game.playtime} min</p>
-        <p><strong>Sprog:</strong> ${game.language}</p>
         <p><strong>Rating:</strong> ${game.rating}</p>
         <p><strong>Hylde:</strong> ${game.shelf}</p>
         <p><strong>Beskrivelse:</strong> ${game.description}</p>
