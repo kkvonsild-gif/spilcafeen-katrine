@@ -134,9 +134,8 @@ header h1 {
 
 /* Spilkort */
 .game-card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  border: solid 0.5px var(--primary-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
