@@ -149,7 +149,7 @@ function showGameDialog(game) {
 
   content.innerHTML = `
     <img src="${game.image}" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom:0px;" />
-
+    <h2>${game.title}</h2>
     <div class="game-details">
         <p><strong>Genre:</strong> ${genres}</p>
         <p><strong>Spillere:</strong> ${players}</p>
