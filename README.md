@@ -28,7 +28,8 @@ Jeg fik en advarsel om manglende headers i to section-tags. Jeg har valgt at æn
 ![endnu et billede af html validering](img/html-validering-div-tags.png "HTML validering af div tags.")
 ![billede af html div tags](img/html-div-tags.png "HTML billede af div tags.")
 
-
+Herefter viser validering ingen fejl.
+![billede af html godkendt](img/html-godkendt.png "HTML godkendt.")
 
 ## JavaScript datastruktur
 Jeg arbejder med data hentet fra en JSON-fil. I JavaScript har jeg gemt dataene i et array (`allGames`). Arrayet indeholder objekter fra JSON-filen, som er hentet og gemt i variablen `data`. Hvert objekt repræsenterer et spil, og har properties'ne: 
