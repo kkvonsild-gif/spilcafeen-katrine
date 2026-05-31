@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spilcafeen spiloversigt</title>
     <link rel="stylesheet" href="app.css">
-    <link rel="shortcut icon" href="img/SC-logo-2023-transparant-BG+Small+Crop.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="img/spilcafeen-logo.webp" type="image/x-icon">
 </head>
 <body>
     
     <header>
       <h1>Spiloversigt</h1>
-      <img class="logo" src="img/SC-logo-2023-transparant-BG+Small+Crop.webp" alt="spilcafeen_logo" width="80px" >
+      <img class="logo" src="img/spilcafeen-logo.webp" alt="spilcafeen_logo" width="80" >
     </header>
 
     <main>
       <form class="controls">
         <div class="control-group">
           <label for="search-input">Søg på titel</label>
-          <input type="text" id="search-input" placeholder="Fx brætspil" />
+          <input type="text" id="search-input" placeholder="Fx brætspil">
         </div>
 
         <div class="control-group">
@@ -38,13 +38,13 @@
         </div>
       </form>
 
-      <section class="status-bar">
+      <div class="status-bar">
         <p id="game-count">Viser 0 spil</p>
-      </section>
+      </div>
 
-      <section id="game-list" class="game-grid">
+      <div id="game-list" class="game-grid">
         <p class="loading">Loader spil...</p>
-      </section>
+      </div>
     </main>
 
     <dialog id="game-dialog">

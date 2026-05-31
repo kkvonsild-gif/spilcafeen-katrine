@@ -15,28 +15,20 @@ Mit projekt er organiseret således:
 * `img`-mappen bruger jeg til at strukturere mit eneste billede (logo), som er en `.webp`-fil så indlæsningstiden optimeres. 
 
 ## Validering af CSS
-Beskriv, hvordan du har valideret din CSS.
+Jeg har valideret ´app.css` vha. W3School's CSS Validation Service. Ingen fejl fundet.
 
-Skriv for eksempel:
-
-* Hvilken CSS-fil har du valideret?
-* Hvilket værktøj har du brugt?
-* Fik du fejl eller advarsler?
-* Hvordan rettede du eventuelle fejl?
-
-> Jeg har valideret ´app.css` vha. W3School's CSS Validation Service. 
+![billede af CSS validering](img/css-validering.png "CSS validering.")
 
 ## Validering af HTML
-Beskriv, hvordan du har valideret din HTML.
+Jeg har valideret ´index.html` vha. W3School's Markup Validation Service. 
+Jeg har lavet den fejl at skrive px i width for et billede i HTML, hvor der blot forventes et tal. Det har jeg rettet, så der kun står "80".
+![billede af html validering](img/html-validering.png "HTML validering.")
 
-Skriv for eksempel:
+Jeg fik en advarsel om manglende headers i to section-tags. Jeg har valgt at ændre begge til div-tags, da de begge har et layout-mæssigt formål. Den ene er blot en status bar der skal vise, hvor mange resultater der vises, og den anden er blot containeren for spil-griddet.
+![endnu et billede af html validering](img/html-validering-div-tags.png "HTML validering af div tags.")
+![billede af html div tags](img/html-div-tags.png "HTML billede af div tags.")
 
-* Hvilken HTML-fil har du valideret?
-* Hvilket værktøj har du brugt?
-* Fik du fejl eller advarsler?
-* Hvordan rettede du eventuelle fejl?
 
-> Jeg har valideret ´index.html` vha. W3School's Markup Validation Service. 
 
 ## JavaScript datastruktur
 Jeg arbejder med data hentet fra en JSON-fil. I JavaScript har jeg gemt dataene i et array (`allGames`). Arrayet indeholder objekter fra JSON-filen, som er hentet og gemt i variablen `data`. Hvert objekt repræsenterer et spil, og har properties'ne: 
